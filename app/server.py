@@ -43,7 +43,7 @@ async def setup_learner():
     try:
         #learn = load_learner(path, export_file_name)        
         #learn = keras.models.load_model("app/"+export_file_name)
-       learn = keras.models.load_model(model_path)
+        learn = keras.models.load_model(model_path)
         return learn
     except RuntimeError as e:
         if len(e.args) > 0 and 'CPU-only machine' in e.args[0]:
